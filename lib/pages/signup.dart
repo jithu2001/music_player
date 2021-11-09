@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:music_player/Homepage.dart';
 import 'package:music_player/data/usermodel.dart';
 import 'package:music_player/pages/signin.dart';
 import 'package:flutter/material.dart';
-import 'package:music_player/pages/top_hits.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -300,6 +300,7 @@ class _SignUpPageState extends State<SignUpPage> {
         .set(usermodel.toMap());
     Fluttertoast.showToast(msg: "Account created successfully:)");
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Tophits()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 }

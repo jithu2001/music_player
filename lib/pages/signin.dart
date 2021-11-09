@@ -1,8 +1,8 @@
+import 'package:music_player/Homepage.dart';
 import 'package:music_player/pages/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:music_player/pages/top_hits.dart';
 
 class Signin extends StatefulWidget {
   const Signin({Key? key}) : super(key: key);
@@ -218,7 +218,7 @@ class _SigninState extends State<Signin> {
           .then((uid) => {
                 Fluttertoast.showToast(msg: "login successful"),
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Tophits())),
+                    MaterialPageRoute(builder: (context) => HomePage())),
               })
           .catchError((e) {
         Fluttertoast.showToast(msg: e!.message);
