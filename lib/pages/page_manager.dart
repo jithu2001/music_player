@@ -34,20 +34,37 @@ class PageManager {
 
   // TODO: set playlist
   void _setInitialPlaylist() async {
-    const prefix = 'https://www.soundhelix.com/examples/mp3';
-    final song1 = Uri.parse('$prefix/SoundHelix-Song-1.mp3');
-    final song2 = Uri.parse('$prefix/SoundHelix-Song-2.mp3');
-    final song3 = Uri.parse('$prefix/SoundHelix-Song-3.mp3');
-    final song4 = Uri.parse('$prefix/SoundHelix-Song-4.mp3');
-    final song5 = Uri.parse('$prefix/SoundHelix-Song-5.mp3');
-    final song6 = Uri.parse('$prefix/SoundHelix-Song-6.mp3');
+    final song1 = Uri.parse(
+        'https://pagalfree.com/musics/128-Duniyaa%20-%20Luka%20Chuppi%20128%20Kbps.mp3');
+    final song2 = Uri.parse(
+        'https://pagalfree.com/musics/128-Woh%20Din%20-%20Chhichhore%20128%20Kbps.mp3');
+    final song3 = Uri.parse(
+        'https://pagalfree.com/musics/128-Photo%20-%20Luka%20Chuppi%20128%20Kbps.mp3');
+    final song4 = Uri.parse(
+        'https://pagalfree.com/musics/128-Chogada%20-%20Loveyatri%20-%20A%20Journey%20Of%20Love%20128%20Kbps.mp3');
+    final song5 = Uri.parse(
+        'https://pagalfree.com/musics/128-Tere%20Naal%20-%20Tulsi%20Kumar%20And%20Darshan%20Raval%20128%20Kbps.mp3');
+    final song6 = Uri.parse(
+        'https://pagalfree.com/musics/128-Hone%20Laga%20-%20Antim%20The%20Final%20Truth%20128%20Kbps.mp3');
+    final song7 = Uri.parse(
+        'https://pagalfree.com/musics/128-Kamli%20-%20Hum%20Do%20Humare%20Do%20128%20Kbps.mp3');
+    final song8 = Uri.parse(
+        'https://pagalfree.com/musics/128-Chale%20Aana%20-%20De%20De%20Pyaar%20De%20128%20Kbps.mp3');
+    final song9 = Uri.parse(
+        'https://pagalfree.com/musics/128-Teri%20Mitti%20-%20Female%20Version%20-%20Kesari%20128%20Kbps.mp3');
+    final song10 = Uri.parse(
+        'https://pagalfree.com/musics/128-Raula%20Pae%20Gayaa%20-%20Hum%20Do%20Humare%20Do%20128%20Kbps.mp3');
     _playlist = ConcatenatingAudioSource(children: [
-      AudioSource.uri(song1, tag: 'Obsession'),
-      AudioSource.uri(song2, tag: 'Every Second'),
-      AudioSource.uri(song3, tag: 'High Free Spirit'),
-      AudioSource.uri(song4, tag: 'High Free Spirit'),
-      AudioSource.uri(song5, tag: 'High Free Spirit'),
-      AudioSource.uri(song6, tag: 'High Free Spirit'),
+      AudioSource.uri(song1, tag: 'Duniyaa'),
+      AudioSource.uri(song2, tag: 'Woh Din'),
+      AudioSource.uri(song3, tag: 'Photo'),
+      AudioSource.uri(song4, tag: 'Chogada'),
+      AudioSource.uri(song5, tag: 'Tere Naal'),
+      AudioSource.uri(song6, tag: 'Hone Laga'),
+      AudioSource.uri(song7, tag: 'Kamli'),
+      AudioSource.uri(song8, tag: 'Chale Aana'),
+      AudioSource.uri(song9, tag: 'Teri Mitti'),
+      AudioSource.uri(song10, tag: 'Raula Pae Gayaa'),
     ]);
     await _audioPlayer.setAudioSource(_playlist);
   }

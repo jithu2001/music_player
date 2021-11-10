@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:music_player/Homepage.dart';
 
 class FavouritesPage extends StatefulWidget {
   const FavouritesPage({Key? key}) : super(key: key);
@@ -28,7 +29,8 @@ class _FavouritesPageState extends State<FavouritesPage> {
           leading: IconButton(
             icon: Icon(Iconsax.arrow_left, color: Colors.purpleAccent),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HomePage()));
             },
           )),
       body: SafeArea(

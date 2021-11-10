@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../Homepage.dart';
+
 class MyMusic extends StatelessWidget {
   const MyMusic({Key? key}) : super(key: key);
 
@@ -12,7 +14,8 @@ class MyMusic extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               icon: Icon(Iconsax.arrow_left, color: Colors.purpleAccent)),
           title: Text('MyMusic',
